@@ -115,32 +115,6 @@ a:hover {
   color: var(--color-link-hover);
 }
 
-header h1, header h2{
-  font-size: var(--font-size-base);
-  font-weight: 300;
-}
-
-header h1:before{
-  content:"*";
-}
-
-header h2{
-  margin-left: 0.5rem;
-}
-
-header p{
-  padding: 20px 0;
-  line-height: 1;
-}
-
-header p > br {
-  display: none;
-}
-
-header a {
-  text-decoration: none;
-}
-
 .dateTime {
   color: var(--color-text);
   position: fixed;
@@ -259,67 +233,43 @@ header a {
   color: #d36b00;
 }
 
-.eye {
-  position: relative;
-  display: inline-block;
-  color: #fff;
-  z-index: 1;
-  font-size: clamp(0.45rem, 1vw, 0.85rem);
+.loader {
   font-family: monospace;
-  will-change: opacity, transform;
+  display: inline-block;
 }
 
-.eye::before,
-.eye::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 2px;
-  height: 520%;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--color-light-accent),
-    transparent
-  );
+.loader::after {
+  content: "_";
+  display: inline-block;
+  animation: spin 1s steps(8) infinite;
+}
+
+.ray {
+  display: inline-block;
+  font-family: monospace;
+  animation: girar 1s steps(8) infinite;
   transform-origin: center;
-  filter: none;
-  box-shadow: 0 0 8px rgba(255,255,220,0.6);
-  pointer-events: none;
-  animation: sparkle 3.5s ease-in-out infinite;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .eye::before,
-  .eye::after {
-    animation: none;
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
-/* Rayo vertical */
-.eye::before {
-  transform: translate(-50%, -50%) rotate(0deg);
-  box-shadow:
-    0 0 12px rgba(255, 255, 220, 0.8),
-    0 0 30px rgba(255, 255, 200, 0.6);
-}
-
-/* Rayo diagonal */
-.eye::after {
-  transform: translate(-50%, -50%) rotate(45deg);
-  box-shadow:
-    0 0 12px rgba(255, 255, 220, 0.8),
-    0 0 30px rgba(255, 255, 200, 0.6);
-}
-
-@keyframes sparkle {
-  0%, 100% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
+@keyframes spin {
+  0%   { content: "_"; transform: translateY(0); }
+  12.5% { content: "\\"; transform: translateY(3px); }
+  25%  { content: "|"; transform: translateY(5px); }
+  37.5% { content: "/"; transform: translateY(3px); }
+  50%  { content: "_"; transform: translateY(0); }
+  62.5% { content: "\\"; transform: translateY(3px); }
+  75%  { content: "|"; transform: translateY(5px); }
+  87.5% { content: "/"; transform: translateY(3px); }
+  100% { content: "_"; transform: translateY(0); }
 }
 
 @media (min-width: 768px) {
@@ -339,5 +289,9 @@ header a {
 
   section .link-container {
     max-width: 75%;
+  }
+
+  .image > pre {
+  font-size: clamp(0.45rem, 1.3vw, 1.85rem);
   }
 }
