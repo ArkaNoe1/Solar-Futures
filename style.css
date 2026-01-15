@@ -3,11 +3,9 @@
   --color-text: #f7f7f7;
   --color-link-hover: #d36b00;
   --color-accent: #f2e500;
-  --color-light-accent: rgba(255, 245, 200, 0.9);
   --font-primary: "Courier New", Courier, monospace;
   --font-size-base: 1rem;
   --font-size-title: clamp(1.5rem, 8vw, 4rem);
-  --font-size-datetime: 1.125rem;
 }
 
 *, 
@@ -27,12 +25,6 @@ body {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
-
-/*header {
-  position: sticky;
-  top: 0;
-  background-color: #000;
-}*/
 
 nav ul {
   padding: 0;
@@ -221,14 +213,17 @@ a:hover {
   height: 1em;
   vertical-align: middle;
   transform-origin: left;
+  position:relative;
 }
 
 .svg-char svg {
   position: absolute;
-  width: 50em;
-  height: 50em;
-  overflow: visible;
-  display: block;
+  top: 0;
+  left: 0;
+  width: 52em;
+  height: 52em;
+  transform: translate(-39%, -19%);
+  pointer-events: none;
 }
 
 .svg-char text {
@@ -253,6 +248,7 @@ a:hover {
 
 .logo-grid {
   display: flex;
+  flex-flow: wrap;
   gap: 2rem;
   align-items: center;
   padding: 1rem;
@@ -300,5 +296,9 @@ a:hover {
     position: absolute;
     right: -10em;
     top: 42px;
+  }
+
+  .image > pre {
+    font-size: clamp(1rem, 2vw, 1rem);
   }
 }
