@@ -20,7 +20,7 @@
           <span aria-hidden="true">***</span>
         </h1>
         <span aria-hidden="true" class="asterix">***</span>
-        <img src="img/european.png" alt="european union logo" class="european">
+        <img src="img/Co-fundedbytheEU-logo.webp" alt="european union logo" class="european" width="200">
       </div>
       <nav aria-label="Main navigation">
         <ul>
@@ -59,7 +59,7 @@
 
     <div class="main">
       <section id="design">
-        <div class="link-container">
+        <div class="container">
           <h2>Design</h2>
           <p>This website is a tool to communicate and share our values and ideas, but also an on going project to imagine sustainable futures, where individuals, collectives and institutions manage their digital data in a more decentralise and sustainable way. </p>
           <p>It is a reflection about the energy consume of our every day actions, and our every day decisions on the digital world that, although confortable for us, have an impact on the planet and on communities in other parts of the world. </p>
@@ -69,14 +69,22 @@
           <p>Designing a solar website means to avoid fancy and heavy software libraries, high definition pictures and non-essential features. As light as possible. This constrains, far from limiting, they are the spark that ignites our creativity and inspire us to look back to the origins of internet when computers memory and processing power was smaller.</p>
 
           <p>Our website is a symbol of our values, a tool and a statement.</p>
+        <hr class="hr-pre">
+        <hr class="hr-pre">
         </div>
+        
       </section>
 
       <section id="technology">
-        <div class="link-container">
+        <div class="container">
           <h2>Technology</h2>
+          <p>This v.1 of our website is not yet completely solar powered. But its design and hardware setup goes towards that goal. According to prior references of similar projects, the website should be hosted on a low powered device. In our case that device is an old Raspberry Pi B+.</p>
+          <p>The operating system that runs on this device is a Raspberry Pi OS (Legacy 32-bit) and inside there is a web server software lighttpd that serves pure static website.</p>
+          <p>Rapsberry Pi hardware runs on 5V 220mA, or about 0.9W. It is connected to a temporary solar power bank that needs to be charged during at nights. <br>
+          A more definitive version of the solar website, the v.2 is on its way.</p>
           <div style="color:aliceblue">
               <pre>
+                               
                                                                       .-''''-.
             _______  _______                                       ,'   <_,-.`.         
             |   |   ||   |   |            ____                01   /)   ,--,_>\_\
@@ -85,19 +93,15 @@
             |___|___||___|___|         __|    |       01           \`-.   ;  _(`/
             |   |   ||   |   |   _   _/  | __ |10    1              `.(    \/ ,'
             |___|___||___|___|\_/ \_/    |____|  1001                 `-....-'
-                            
-
               </pre>
           </div>
-          <p>This v.1 of our website is not yet completely solar powered. But its design and hardware setup goes towards that goal. According to prior references of similar projects, the website should be hosted on a low powered device. In our case that device is an old Raspberry Pi B+.</p>
-          <p>The operating system that runs on this device is a Raspberry Pi OS (Legacy 32-bit) and inside there is a web server software lighttpd that serves pure static website.</p>
-          <p>Rapsberry Pi hardware runs on 5V 220mA, or about 0.9W. It is connected to a temporary solar power bank that needs to be charged during at nights. <br>
-          A more definitive version of the solar website, the v.2 is on its way.</p>
+        <hr class="hr-pre">
+        <hr class="hr-pre">
         </div>
       </section>
 
        <section id="references">
-        <div class="link-container">
+        <div class="container">
           <h2>References</h2>
           <h3>solar-powered webistes examples</h3>
           <ul>
@@ -111,27 +115,7 @@
             <li><a href="https://www.verdeil.net/www.specs.work/">Website design from Marie Verdeil.</a></li>
           </ul>           
         </div>
-      </section>
-
-
-        <div class="image" style="color:aliceblue">
-            <pre>
- ______     ______     __         ______     ______                      
-/\  ___\   /\  __ \   /\ \       /\  __ \   /\  == \                     
-\ \___  \  \ \ \/\ \  \ \ \____  \ \  __ \  \ \  __<                     
- \/\_____\  \ \_____\  \ \_____\  \ \_\ \_\  \ \_\ \_\                   
-  \/_____/   \/_____/   \/_____/   \/_/\/_/   \/_/ /_/                   
-                                                                         
- ______   __  __     ______   __  __     ______     ______     ______    
-/\  ___\ /\ \/\ \   /\__  _\ /\ \/\ \   /\  == \   /\  ___\   /\  ___\   
-\ \  __\ \ \ \_\ \  \/_/\ \/ \ \ \_\ \  \ \  __<   \ \  __\   \ \___  \  
- \ \_\    \ \_____\    \ \_\  \ \_____\  \ \_\ \_\  \ \_____\  \/\_____\ 
-  \/_/     \/_____/     \/_/   \/_____/   \/_/ /_/   \/_____/   \/_____/ 
-                                                                         
-            </pre>
-        </div>
-
-        
+      </section>       
     </div>
   </body>
 </html>
