@@ -289,10 +289,6 @@ a:hover {
     font-size: clamp(0.45rem, 1vw, 0.85rem);
     margin-left: -40px;
   }
-
-  #call pre{
-    font-size: clamp(0.35rem, 1vw, 0.65rem);
-  }
 }
 
 @media (min-width: 769px) {
