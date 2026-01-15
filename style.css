@@ -186,6 +186,10 @@ a:hover {
   font-size: clamp(0.45rem, 1vw, 0.85rem);
 }
 
+#technology pre {
+  font-size: clamp(0.45rem, 1vw, 0.85rem);
+}
+
 .hr-pre {
   border: none;
   height: 2px;
@@ -222,7 +226,7 @@ a:hover {
   left: 0;
   width: 52em;
   height: 52em;
-  transform: translate(-39%, -19%);
+  transform: translate(-39.5%, -19%);
   pointer-events: none;
 }
 
@@ -262,11 +266,32 @@ a:hover {
 
 @media (max-width: 768px) {
   .european {
-    position: absolute;
-    bottom: 10vw;
-    width: 200px;
-    left: 0;
-    transform: translateX(50%);
+    width: clamp(150px, 15vw, 120px);;
+  }
+
+  .asterix {
+    display: none;
+  }
+
+  .header {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ascii-title .label {
+    padding: 0 10px;
+  }
+
+  .svg-char text {
+    font-weight: 600;
+  }
+
+  #technology pre {
+    font-size: clamp(0.45rem, 1vw, 0.85rem);
+    margin-left: -40px;
+  }
+
+  #call pre{
+    font-size: clamp(0.35rem, 1vw, 0.65rem);
   }
 }
 
