@@ -20,10 +20,22 @@ body {
   line-height: 1.2;
   font-family: var(--font-primary);
   padding: 1.5rem 2rem;
-  /* prevents text select */
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+}
+
+.image,
+.image > pre,
+.ascii-title,
+.svg-char,
+.svg-char svg,
+.svg-char text,
+h2::before,
+.sub-menu li:not(:last-child)::after,
+#activities p:not(:last-child)::after,
+section .container::before,
+.logo-grid img {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 nav ul {
@@ -103,6 +115,7 @@ h3{
 
 ul{
   list-style: none;
+  padding-left: 0;
 }
 
 ol{
@@ -222,11 +235,10 @@ a:hover {
 
 .svg-char svg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 52em;
-  height: 52em;
-  transform: translate(-39.5%, -19%);
+  top: -10px;
+  left: 5px;
+  width: 9em;
+  height: 9em;
   pointer-events: none;
 }
 
@@ -321,5 +333,10 @@ a:hover {
 
   .image > pre {
     font-size: clamp(1rem, 2vw, 1rem);
+  }
+
+  .svg-char svg {
+    top: -20px;
+    left: 10px;
   }
 }
