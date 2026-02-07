@@ -154,7 +154,7 @@ a:hover {
 
 .header {
   display: grid;
-  grid-template-columns: 14% 68% 18%;
+  grid-template-columns: 1fr 5fr 1fr;;
 }
 
 .header > :last-child {
@@ -317,7 +317,7 @@ a:hover {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 382px) {
   header nav li a {
     font-size: clamp(0.75rem, 1.5vw, 1rem);
     line-height: 1.4;
@@ -334,6 +334,10 @@ a:hover {
 }
 
 @media (min-width: 769px) {
+  .header {
+    grid-template-columns: 4fr 0.1fr 1fr;
+  }
+  
   nav, #hero {
     padding-left: 150px;
   }
