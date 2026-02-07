@@ -154,7 +154,7 @@ a:hover {
 
 .header {
   display: grid;
-  grid-template-columns: 80% 2% 18%;
+  grid-template-columns: 14% 68% 18%;
 }
 
 .header > :last-child {
@@ -163,6 +163,7 @@ a:hover {
 
 .asterix{
   color: var(--color-accent);
+  text-align: right;
 }
 
 .title {
@@ -176,6 +177,19 @@ a:hover {
   text-transform: uppercase;
   font-weight: 300;
   margin-top: 0;
+  color: var(--color-accent);
+}
+
+.hide-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .ascii-title .label {
@@ -300,6 +314,22 @@ a:hover {
   #technology pre {
     font-size: clamp(0.45rem, 1vw, 0.85rem);
     margin-left: -40px;
+  }
+}
+
+@media (max-width: 380px) {
+  header nav li a {
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    line-height: 1.4;
+    padding: 0.5rem 0;
+  }
+
+  .ascii-title {
+    font-size: .8rem;
+  }
+
+  .european {
+    max-width: 130px;
   }
 }
 
