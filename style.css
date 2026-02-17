@@ -44,10 +44,11 @@ nav ul {
 
 nav ul.sub-menu{
   display: flex;
-  flex-direction: row;
+  flex-flow: wrap;
   gap: 10px;
   text-transform: none;
   padding: 0 0 5px;
+  row-gap: 0;
 }
 
 nav > ul > li {
@@ -64,6 +65,29 @@ nav > ul > li {
 nav a:hover,
 nav a:focus{
  color: var(--color-accent);
+}
+
+.sub-menu a {
+  position: relative;
+  text-decoration: none;
+}
+
+.sub-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.sub-menu a:hover::after,
+.sub-menu a:focus-visible::after {
+  transform: scaleX(1);
 }
 
 main {
@@ -267,7 +291,7 @@ a:hover {
   display: block;
   transform: rotate(90deg);
   transform-origin: left top;
-  margin-top: 1em;
+  margin-top: 2em;
   margin-left: 1em;
 }
 
@@ -292,7 +316,8 @@ a:hover {
 
 @media (max-width: 768px) {
   .european {
-    width: clamp(150px, 15vw, 120px);;
+    width: clamp(120px, 15vw, 150px);
+    height: auto;
   }
 
   .asterix {
@@ -331,6 +356,10 @@ a:hover {
   .european {
     max-width: 130px;
   }
+
+  .sub-menu a::after {
+    bottom: 5px;
+  }
 }
 
 @media (min-width: 769px) {
@@ -340,6 +369,10 @@ a:hover {
   
   nav, #hero {
     padding-left: 150px;
+  }
+
+  nav ul.sub-menu {
+    flex-direction: row;
   }
 
   header p{
