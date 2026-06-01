@@ -313,6 +313,27 @@ a:hover {
   height: auto;
 }
 
+.ecosystem-list h3 {
+  margin: 0;
+  line-height: 1;
+}
+
+.ecosystem-list li {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.ecosystem-list p {
+  margin: 5px 0;
+  justify-self: center;
+}
+
+.ecosystem-list a {
+  justify-self: right;
+}
+
 
 @media (max-width: 768px) {
   .european {
@@ -340,6 +361,15 @@ a:hover {
     font-size: clamp(0.45rem, 1vw, 0.85rem);
     margin-left: -40px;
   }
+
+  .ecosystem-list p, .ecosystem-list a {
+    font-size: 12px;
+  }
+
+  .ecosystem-list li {
+    align-items: center;
+  }
+
 }
 
 @media (max-width: 382px) {
