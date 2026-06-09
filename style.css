@@ -3,6 +3,7 @@
   --color-text: #f7f7f7;
   --color-link-hover: #d36b00;
   --color-accent: #f2e500;
+  --color-news: #95c11f;
   --font-primary: "Courier New", Courier, monospace;
   --font-size-base: 1rem;
   --font-size-title: clamp(1.5rem, 8vw, 4rem);
@@ -132,6 +133,10 @@ h2:before{
   margin-right: 10px;
 }
 
+#home-news h2:before{
+  content: none;
+}
+
 h3{
   font-size: 1rem;
   margin-top: 40px;
@@ -221,10 +226,57 @@ a:hover {
   color: var(--color-accent);
 }
 
+.label-news {
+  padding: 0 30px;
+  color: var(--color-news);
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+#home-news article:not(:nth-child(2)) h3:before {
+  content: "/*";
+  display: block;
+  margin-bottom: 30px;
+  color: var(--color-accent);
+}
+
+#home-news header {
+  display: inline-flex;
+  width: 100%;
+}
+
 .image {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.ascii-divider {
+  border: none;
+  margin: 0;
+}
+
+.ascii-divider:before {
+  content: ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::";
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--color-text);
+}
+
+.news-item h3 > a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 300;
+}
+
+.news-item p {
+  margin-top: 0;
+  color: var(--color-news);
+}
+
+.news-item h3 {
+  margin-bottom: 5px;
 }
 
 .image > pre {
@@ -401,6 +453,10 @@ a:hover {
     padding-left: 150px;
   }
 
+  #home-news article {
+    padding-left: 130px;
+  }
+
   nav ul.sub-menu {
     flex-direction: row;
   }
@@ -429,7 +485,7 @@ a:hover {
   }
 
   .image > pre {
-    font-size: clamp(1rem, 2vw, 1rem);
+    font-size: clamp(0.64rem, 1.28vw, 0.8rem);
   }
 
   .svg-char svg {
