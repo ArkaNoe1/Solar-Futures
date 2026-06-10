@@ -512,7 +512,7 @@ a:hover {
   }
 
   #home-news article {
-    padding-left: 130px;
+    padding: 0 0 0 130px;
     max-width: 420px;
   }
 
