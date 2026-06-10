@@ -97,7 +97,7 @@ main {
   padding: 0 1rem;
 }
 
-section {
+section, article {
   padding: 2rem 0;
   margin: 0 auto 0 0;
   max-width: 1440px;
@@ -399,6 +399,25 @@ a:hover {
   justify-self: right;
 }
 
+.news-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 50px 0 0;
+}
+
+.news-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%) contrast(120%);
+}
+
+.news-gallery figcaption {
+  grid-column: 1 / -1;
+  margin-top: 0.5rem;
+}
+
 
 @media (max-width: 768px) {
   .european {
@@ -433,6 +452,32 @@ a:hover {
 
   .ecosystem-list li {
     align-items: center;
+  }
+
+  .news-title {
+    max-width: 100%;
+  }
+
+  .news-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .ascii-title .label-news {
+    display: none;
+  }
+
+  .news-item h3 {
+    margin-top: 0;
+  }
+
+  .news-item {
+    padding: 2rem 0 0;
+  }
+
+  .news-item p {
+    margin-bottom: 0;
   }
 
 }
@@ -483,13 +528,15 @@ a:hover {
     display: block;
   }
 
-  section .container {
+  section .container, 
+  article .container {
     max-width: 75%;
     padding-left: 150px;
     position: relative;
   }
 
-  section .container:before {
+  section .container:before, 
+  article .container:before {
     content: "***";
     display: block;
     color: var(--color-accent);
