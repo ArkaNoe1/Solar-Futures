@@ -406,14 +406,23 @@ a:hover {
   margin: 50px 0 0;
 }
 
-.news-gallery img {
+.news-gallery-2row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 50px 0 0;
+}
+
+.news-gallery img, 
+.news-gallery-2row img {
   width: 100%;
   height: auto;
   display: block;
   filter: grayscale(100%) contrast(120%);
 }
 
-.news-gallery figcaption {
+.news-gallery figcaption, 
+.news-gallery-2row figcaption {
   grid-column: 1 / -1;
   margin-top: 0.5rem;
 }
@@ -513,7 +522,7 @@ a:hover {
 
   #home-news article {
     padding: 0 0 0 130px;
-    max-width: 420px;
+    max-width: 430px;
   }
 
   nav ul.sub-menu {
