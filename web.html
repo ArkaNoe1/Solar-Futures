@@ -7,11 +7,12 @@
     <meta name="color-scheme" content="light dark">
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./style.css" />
+    <script type="text/javascript" src="main.js" defer></script>
     
     <title>Solar web v.1 - Solar Futures</title>
   </head>
 
-  <body>
+  <body data-page="solar-web">
     <header>
       <div class="header">
         <div class="ascii-title">
@@ -19,9 +20,13 @@
           <a href="index.html" class="label">Home</a>
           <span aria-hidden="true">***</span>
           <a href="index.html#home-news" class="label-news">News</a>
+          <button id="theme-toggle" aria-label="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button id="text-size" aria-label="Increase text size" title="Increase text size">A+</button>
         </div>
         <span aria-hidden="true" class="asterix">***</span>
-        <img src="img/Co-fundedbytheEU-logo.webp" alt="european union logo" class="european" width="200" height="45">
+        <img src="img/Co-fundedbytheEU-logo.webp" alt="european union logo" class="european logo" width="200" height="45">
       </div>
       <nav aria-label="Main navigation">
         <ul>
@@ -30,6 +35,7 @@
               <li><a href="project.html#about">About</a></li>
               <li><a href="project.html#goals">Goals</a></li>
               <li><a href="project.html#activities">Activities</a></li>
+              <li><a href="project.html#topics">Topics</a></li>
             </ul>
           </li>
           <li><a href="members.html">Partners</a>
@@ -42,11 +48,12 @@
               <li><a href="members.html#vub">VUB</a></li>
             </ul>
           </li>
-          <li><a href="open-call.html">Call</a>
+          <li><a href="open-call.html">Resources</a>
             <ul class="sub-menu">
-              <li><a href="open-call.html#call">Information</a></li>
+              <li><a href="open-call.html#call">Call</a></li>
               <li><a href="open-call.html#selected-artists">Selected artists</a></li>
               <li><a href="open-call.html#ecosystem">Ecosystem</a></li>
+              <li><a href="open-call.html#links">Links</a></li>
             </ul>
           </li>
           <li><a href="web.html">Solar web v.1</a>
@@ -60,7 +67,7 @@
       </nav>
     </header>
 
-    <div class="main">
+    <main class="main">
       <h1 class="hide-title">Solar web v.1</h1>
       <section id="design">
         <div class="container">
@@ -86,7 +93,7 @@
           <p>The operating system that runs on this device is a Raspberry Pi OS (Legacy 32-bit) and inside there is a web server software lighttpd that serves pure static website.</p>
           <p>Rapsberry Pi hardware runs on 5V 220mA, or about 0.9W. It is connected to a temporary solar power bank that needs to be charged during at nights. <br>
           A more definitive version of the solar website, the v.2 is on its way.</p>
-          <div style="color:aliceblue">
+          <div style="color: var(--color-text)">
               <pre>
                                
                                                                       .-''''-.
@@ -120,6 +127,6 @@
           </ul>           
         </div>
       </section>       
-    </div>
+    </main>
   </body>
 </html>

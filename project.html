@@ -7,11 +7,12 @@
     <meta name="color-scheme" content="light dark">
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./style.css" />
+    <script type="text/javascript" src="main.js" defer></script>
     
     <title>Project - Solar Futures</title>
   </head>
 
-  <body>
+  <body data-page="project">
     <header>
       <div class="header">
         <div class="ascii-title">
@@ -19,9 +20,13 @@
           <a href="index.html" class="label">Home</a>
           <span aria-hidden="true">***</span>
           <a href="index.html#home-news" class="label-news">News</a>
+          <button id="theme-toggle" aria-label="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button id="text-size" aria-label="Increase text size" title="Increase text size">A+</button>
         </div>
         <span aria-hidden="true" class="asterix">***</span>
-        <img src="img/Co-fundedbytheEU-logo.webp" alt="european union logo" class="european" width="200" height="45">
+        <img src="img/Co-fundedbytheEU-logo.webp" alt="european union logo" class="european logo" width="200" height="45">
       </div>
       <nav aria-label="Main navigation">
         <ul>
@@ -30,6 +35,7 @@
               <li><a href="project.html#about">About</a></li>
               <li><a href="project.html#goals">Goals</a></li>
               <li><a href="project.html#activities">Activities</a></li>
+              <li><a href="project.html#topics">Topics</a></li>
             </ul>
           </li>
           <li><a href="members.html">Partners</a>
@@ -42,11 +48,12 @@
               <li><a href="members.html#vub">VUB</a></li>
             </ul>
           </li>
-          <li><a href="open-call.html">Call</a>
+          <li><a href="open-call.html">Resources</a>
             <ul class="sub-menu">
-              <li><a href="open-call.html#call">Information</a></li>
+              <li><a href="open-call.html#call">Call</a></li>
               <li><a href="open-call.html#selected-artists">Selected artists</a></li>
               <li><a href="open-call.html#ecosystem">Ecosystem</a></li>
+              <li><a href="open-call.html#links">Links</a></li>
             </ul>
           </li>
           <li><a href="web.html">Solar web v.1</a>
@@ -60,7 +67,7 @@
       </nav>
     </header>
 
-    <div class="main">
+    <main class="main">
       <h1 class="hide-title">Project</h1>
         <section id="about">             
           <div class="container">
@@ -68,7 +75,7 @@
               <p>SOLAR FUTURES- Imagining Regenerative Worlds through Art, Science & Technology, is a collaboration project presented by four cultural organizations working at the intersection of art, science, and digital technologies – OHME (BE), Electroni[k] (FR), LEV (ES), and iii (NL), in partnership with two associated universities: Université Libre de Bruxelles (BE) and Vrije Universiteit Brussel (BE).</p> 
               <p>The project establishes a new residency, production, circulation and peer-learning program that supports artists from diverse disciplines in creating artworks that explore desirable ecological, digital, and societal futures. At the heart of this initiative is Solarpunk, a movement that envisions optimistic, ecologically harmonious, and community-driven futures where humans, technology and nature coexist sustainably. By inviting artists to explore and engage with this concept, we create a platform for innovative transformative ideas that challenge traditional narratives and promote awareness of environmental concerns.</p>
               <p>SOLAR FUTURES is supported by the Creative Europe Programme of the European Union.</p>
-              <div class="logo-grid">
+              <div class="logo-grid logo">
                 <img src="img/ohme-logo.webp" alt="Logo ohme" width="100">
                 <img src="img/iii-logo.webp" alt="Logo iii" width="30">
                 <img src="img/EK-logo.webp" alt="Logo Electronik" width="40">
@@ -109,8 +116,58 @@
             <p>Public workshops designed to share artistic and technological processes with local communities and professionals.</p>
             <p>A solar-powered low-tech design website, opening the path to new practices in the cultural field.</p>
             <p>A case study on the program, disseminated among the CCIs.</p>
+            <hr class="hr-pre">
+            <hr class="hr-pre">
           </div>
       </section>
-    </div> <!-- main -->
+
+      <section id="topics">
+          <div class="container">
+            <h2>Solar Punk Movement</h2>
+            <p>At the heart of SOLAR FUTURES lies Solarpunk, a movement that envisions optimistic, ecologically harmonious, and community-driven futures where humans, technology, and nature coexist sustainably.</p>
+            <blockquote>
+              <p>Solarpunk is the first creative movement consciously and positively responding to the Anthropocene. When no place on Earth is free from humanity's hedonism, Solarpunk proposes that humans can learn to live in harmony with the planet once again. Solarpunk is a literary movement, a hashtag, a flag, and a statement of intent about the future we hope to create.</p>
+              <footer>
+                <cite>Ben Valentine, “Solarpunk wants to save the world”</cite>
+              </footer>
+            </blockquote>
+            <p>Drawing inspiration from renewable energies, prefigurative politics, and do-it-yourself ethics, Solarpunk reclaims technology as a tool for empowerment, commoning, and decentralized living. It actively promotes:</p>
+            <ul>
+              <li>Open-source tools and knowledge sharing</li>
+              <li>Ethical tech solutions that prioritize human and ecological wellbeing</li>
+              <li>Thoughtful design that fosters community and conviviality</li>
+              <li>Equitable futures that center justice and inclusion</li>
+            </ul>
+            <p>Solarpunk rejects techno-pessimism and climate doomerism. Instead of surrendering to despair or dystopian visions, it imagines and enacts positive alternatives in the face of ecological and social crises.</p>
+
+            <h2>Permacomputer Ideas</h2>
+            <p><a href="https://permacomputing.net/" aria-label="Visit permacomputing site" target="_blank" rel="noopener noreferrer">Permacomputing</a> (https://permacomputing.net/) refers to an emerging approach to digital creation inspired by permaculture principles: frugality, adaptability, longevity, and long-term thinking. It calls for a conscious, low-impact use of technology, advocating for:<p>
+            <ul>
+              <li>Energy-efficient code and computational practices.</li>
+              <li>Local servers and decentralized networks.</li>
+              <li>Open-source tools and platforms.</li>
+              <li>Low-tech and appropriate technology.</li>
+              <li>Digital minimalism and data sobriety.</li>
+              <li>Ethical alternatives to extractive tech models.</li>
+            </ul>
+            <p>This sub-theme is particularly relevant for digital artists, designers, creative technologists, and makers working with code, networks, generative art, machine learning, interactive media, or computational systems - and who are interested in rethinking their practice in ecological and ethical terms.</p>
+            <p>It offers a space for dialogue between digital creators, green tech activists, and critical technologists exploring how creative practice can resist planned obsolescence, data extraction, and the environmental costs of digital culture.</p>
+
+            <h2>Imaginaries for Political and Societal Organization Topics</h2>
+            <p>This thematic area encourages artists to envision post-capitalist, inclusive, and decentralized futures - core values of the Solarpunk movement. It welcomes critical and speculative practices exploring:</p>
+            <ul>
+              <li>Alternative governance models and democratic experimentation.</li>
+              <li>Cooperation, mutualism, and commons-based organizing.</li>
+              <li>Care economies and feminist economics.</li>
+              <li>Community resilience and mutual aid.</li>
+              <li>Alternative social infrastructures (housing, food systems, education).</li>
+              <li>Decolonial and indigenous perspectives on living systems.</li>
+              <li>Prefigurative politics - embodying the change we wish to see.</li>
+            </ul>
+            <p>This focus is particularly relevant for performance artists, community-based creators, participatory practitioners, and artists engaged with activism, social justice, or relational aesthetics. It supports projects that question existing power structures, center marginalized voices, and propose new ways of being together.</p>
+
+          </div>
+      </section>
+    </main> <!-- main -->
   </body>
 </html>
