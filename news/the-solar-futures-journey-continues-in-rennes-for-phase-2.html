@@ -7,11 +7,12 @@
     <meta name="color-scheme" content="light dark">
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../style.css" />
+    <script type="text/javascript" src="../main.js" defer></script>
     
     <title>The SOLAR FUTURES journey continues in Rennes for Phase 2</title>
   </head>
 
-  <body>
+  <body data-page="news">
     <header>
       <div class="header">
         <div class="ascii-title">
@@ -19,9 +20,13 @@
           <a href="../index.html" class="label">Home</a>
           <span aria-hidden="true">***</span>
           <a href="../index.html#home-news" class="label-news">News</a>
+          <button id="theme-toggle" aria-label="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button id="text-size" aria-label="Increase text size" title="Increase text size">A+</button>
         </div>
         <span aria-hidden="true" class="asterix">***</span>
-        <img src="../img/Co-fundedbytheEU-logo.webp" alt="european union logo" class="european" width="200" height="45">
+        <img src="../img/Co-fundedbytheEU-logo.webp" alt="european union logo" class="european logo" width="200" height="45">
       </div>
       <nav aria-label="Main navigation">
         <ul>
@@ -60,7 +65,7 @@
       </nav>
     </header>
 
-    <div class="main">
+    <main class="main">
       <h1 class="news-title">The SOLAR FUTURES journey continues in Rennes for Phase 2</h1>
       <article class="content-news">
         <div class="container">
@@ -79,6 +84,6 @@
         </div>
         
       </article>    
-    </div>
+    </main>
   </body>
 </html>
