@@ -34,7 +34,6 @@
   --font-size-subtitle: 1.25rem;
   --line-height-base: 1.25;
   --artist-title-margin-top: 40px;
-  --space-30: 0.625rem;
 }
 
 *, 
@@ -256,6 +255,8 @@ a:focus-visible {
 .theme-buttons {
   grid-area: buttons;
   justify-self: end;
+  display: flex;
+  gap: var(--space-20);
 }
 
 .hide-title {
@@ -513,8 +514,11 @@ blockquote cite {
   font:inherit;
   color: var(--color-accent);
   line-height: var(--line-height-base);
-  vertical-align: middle;
   cursor: pointer;
+}
+
+#theme-toggle svg {
+  vertical-align: middle;
 }
 
 .lucide.lucide-sun-icon.lucide-sun {
@@ -539,6 +543,9 @@ blockquote cite {
 
 
 @media (max-width: 768px) {
+  :root[data-text="large"] {
+    --space-30: 0.625rem;
+  }
   .european {
     width: clamp(120px, 15vw, 150px);
     height: auto;
