@@ -34,6 +34,7 @@
   --font-size-subtitle: 1.25rem;
   --line-height-base: 1.25;
   --artist-title-margin-top: 40px;
+  --space-30: 0.625rem;
 }
 
 *, 
@@ -223,7 +224,7 @@ a:focus-visible {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-areas:"logo logo" "home-nav buttons";
-  gap: var(--space-20) 0;
+  gap: var(--space-10) 0;
   align-items:start;
 }
 
@@ -255,7 +256,6 @@ a:focus-visible {
 .theme-buttons {
   grid-area: buttons;
   justify-self: end;
-  margin-top: -3px;
 }
 
 .hide-title {
