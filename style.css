@@ -224,7 +224,8 @@ a:focus-visible {
   grid-template-columns: auto 1fr;
   grid-template-areas:"logo logo" "home-nav buttons";
   gap: var(--space-10) 0;
-  align-items:start;
+  align-items: start;
+  margin-bottom: var(--space-30);
 }
 
 
@@ -619,6 +620,7 @@ blockquote cite {
     grid-template-columns: max-content max-content auto;
     grid-template-areas: "home-nav buttons logo";
     gap: var(--space-30);
+    margin-bottom: 0;
   }
 
   .eu-logo {
