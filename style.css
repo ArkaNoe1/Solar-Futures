@@ -200,13 +200,13 @@ a {
   text-decoration: none;
 }
 
-section a {
+section a, .content-news a {
   text-decoration: underline;
   color: var(--color-accent);
   font-weight: var(--font-weight-text);
 }
 
-section a:hover{
+section a:hover, .content-news a::hover{
   color: var(--color-text);
 }
 
